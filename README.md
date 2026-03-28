@@ -20,6 +20,12 @@ npm run dev
 
 Open **http://localhost:3000**.
 
+### Security and secrets
+
+- **Do not commit** passwords, API keys, tokens, private keys (`.pem`, `.key`), or **local paths** (for example Windows user or drive paths).
+- Use **`.env.local`** for machine-only settings; it is **gitignored**. Copy **`.env.example`** to `.env.local` and edit—only the example file belongs in the repo.
+- Business contact details and map links on the site are **public** (same as the live company website), not private credentials.
+
 | Command | Purpose |
 |--------|---------|
 | `npm run dev` | Development server |
@@ -50,7 +56,7 @@ Peninsula_WebClone/   (this repo)
 │   ├── components/          # Header, Footer, PageBanner, CTABanner, EnquiryForm
 │   └── lib/
 │       └── siteAssets.ts      # Local vs remote asset URLs
-├── .env.local                 # Optional (gitignored): NEXT_PUBLIC_USE_LOCAL_ASSETS
+├── .env.example               # Safe template (tracked); copy to .env.local (gitignored)
 ├── next.config.mjs
 ├── package.json
 ├── tailwind.config.ts
